@@ -1,10 +1,13 @@
 body {
     padding: 50px;
-    background-color: orange;
+    background-color: #FFEFB1;
     font-family: inherit;
 }
 
 #container {
     display: flex;
     justify-content: flex;
+
+    max-width: 500px;
+    margin: 0 auto;
 }
