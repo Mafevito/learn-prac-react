@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import TodoItems from './TodoItems';
 
 class TodoList extends Component {
     constructor(props) {
@@ -6,29 +7,29 @@ class TodoList extends Component {
 
         //Las tareas se van a almacenar en un array
         this.state = {
-            tasks: []
+            items: []
         }
 
-        this.addTask = this.addTask.bind(this);
+        this.addItem = this.addItem.bind(this);
     }
 
 //Evento de añadir
-    addTask(e) {
+    addItem(e) {
         if(this._inputElement.value !== "") {
-            var newTask = {
+            var newItem = {
                 text: this._inputElement.value,
                 key: Date.now()
             };
 
             this.setState((prevState) => {
                 return {
-                    tasks: prevState.tasks.concat(newTask)
+                    items: prevState.items.concat(newItem)
                 };
             });
         }
 
         this._inputElement.value = "";
-        console.log(this.state.tasks);
+        console.log(this.state.items);
         e.preventDefault();
 
     }
@@ -37,11 +38,12 @@ class TodoList extends Component {
         return (
             <div className="todoListMain">
                 <div className="header">
-                    <form onSubmit={this.addTask}>
+                    <form onSubmit={this.addItem}>
                         <input ref={(a) => this._inputElement = a} placeholder="Introducir tarea"/>
                         <button type="submit">Añadir</button>
                     </form>
                 </div>
+                <TodoItems entries={this.state.items} />
             </div>
         )
     }
