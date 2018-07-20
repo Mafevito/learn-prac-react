@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 
 class TodoItems extends Component {
+    constructor(props) {
+        super(props);
+
+        this.createTasks = this.createTasks.bind(this);
+    }
+    
     createTasks(item) {
         //Imprimir el valor de la lista, donde valor es la clave y el texto
-        return <li key={item.key}>{item.text}</li>
+        return <li onClick={() => this.delete(item.key)} key={item.key}>{item.text}</li>
     }
 
     //Obtenemos el valor y renderizamos
