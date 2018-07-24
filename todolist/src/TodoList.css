@@ -1,3 +1,9 @@
+.todoListMain h1 {
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
 .todoListMain .header input {
     border: none;
     padding: 15px;
@@ -18,7 +24,6 @@
 
 .todoListMain .header button:hover {
     background-color: #F4D858;
-    font-weight: 600;
 }
 
 .todoListMain ul.theList {
