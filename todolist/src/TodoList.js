@@ -12,6 +12,7 @@ class TodoList extends Component {
         }
 
         this.addItem = this.addItem.bind(this);
+        this.deleteItem = this.deleteItem.bind(this);
     }
 
 //Evento de añadir
@@ -32,9 +33,20 @@ class TodoList extends Component {
         this._inputElement.value = "";
         console.log(this.state.items);
         e.preventDefault();
-
     }
 
+    deleteItem(key) {
+        console.log("Key in deleteItem: " + key);
+        console.log("Items at delete: " + this.state.items);
+        var filteredItems = this.state.items.filter(function(item){
+            return(item.key !== key)
+        });
+    
+
+    this.setState({
+        items: filteredItems
+    });
+    }
     render() {
         return (
             <div className="todoListMain">
@@ -44,7 +56,7 @@ class TodoList extends Component {
                         <button type="submit">Añadir</button>
                     </form>
                 </div>
-                <TodoItems entries={this.state.items} />
+                <TodoItems entries={this.state.items} delete={this.deleteItem}/>
             </div>
         )
     }

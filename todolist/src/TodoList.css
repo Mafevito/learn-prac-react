@@ -32,4 +32,11 @@
     padding: 15px;
     list-style: none;
     font-size: 16px;
+
+    transition: background-color .2s ease-out;
+}
+
+.todoListMain .theList li:hover {
+    background-color:#E92915;
+    cursor: pointer;
 }

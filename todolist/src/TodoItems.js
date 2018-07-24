@@ -12,6 +12,10 @@ class TodoItems extends Component {
         return <li onClick={() => this.delete(item.key)} key={item.key}>{item.text}</li>
     }
 
+    delete(key) {
+        this.props.delete(key);
+    }
+
     //Obtenemos el valor y renderizamos
     render() {
         //Recuperando valores insertados
