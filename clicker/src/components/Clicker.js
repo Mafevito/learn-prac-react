@@ -40,8 +40,8 @@ class Clicker extends Component {
     render() {
         return (
             <div class="content">
-              <h4 className="count-number-total">{this.state.count}</h4>
-              <div className="count-button">
+            <div className="count-button">
+             <h4 className="count-number-total">{this.state.count}</h4>
                <button className="count-more" onClick= {this.incrementCount}>+</button>
                <button className="reset" onClick= {this.resetCount}>reset</button>
                <button className="count-less" onClick= {this.decrementCount}>-</button>

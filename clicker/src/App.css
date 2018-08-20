@@ -8,38 +8,47 @@
 .App-header {
   height: 150px;
   padding: 20px;
-  color: #5A1AA9;
+  color: #000;
 }
 
 .App-title {
-  font-size: 2em;
+  font-size: 3em;
 }
 
 .count-number-total {
-  font-size: 1.5em;
+  font-size: 2em;
+}
+
+.count-button {
+  width: 223px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding-top: 40px;
 }
 
 .count-button .count-more {
-  padding: 10px 20px;
+  padding: 10px 25px;
   border: none;
   background-color: #FD3447;
   color: #fff;
   font-weight: 900;
   font-size: 1.5em;
-  border-radius: 100px;
-  margin-right: 5px;
+  border-bottom-left-radius: 50px;
   cursor: pointer;
 }
 
 .count-button .count-less {
-  padding: 10px 20px;
+  padding: 10px 25px;
   border: none;
   background-color: #FD3447;
   color: #fff;
   font-weight: 900;
   font-size: 1.5em;
-  border-radius: 100px;
-  margin-right: 5px;
+  border-bottom-right-radius: 50px;
   cursor: pointer;
 }
 
@@ -50,7 +59,5 @@
   color: #fff;
   font-weight: 900;
   font-size: 1.5em;
-  border-radius: 100px;
-  margin-right: 5px;
   cursor: pointer;
 }
