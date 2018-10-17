@@ -64,12 +64,15 @@ class Timer extends Component {
     render() {
         return (
             <div>
-            <h1>{this.getMinutes()}:{this.getSeconds()}</h1>
-
-            <button type="button" onClick={this.handleStartClick}>start</button>
-            <button type="button" onClick={this.handleStopClick}>stop</button>
-            <button type="button" onClick={this.handleResetClick}>reset</button>
-
+              <div className="timerBox">
+                <h1>{this.getMinutes()}:{this.getSeconds()}</h1>
+              </div>
+              
+              <div className="controlsTimer">
+                <button type="button" onClick={this.handleStartClick}>start</button>
+                <button type="button" onClick={this.handleStopClick}>stop</button>
+                <button type="button" onClick={this.handleResetClick}>reset</button>
+              </div>
             </div>
         );
     }
